@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 
 console.clear();
-const inputFile = path.resolve(__filename).replace(".ts", ".input");
+
+const inputFile = path.join(path.dirname(__filename), "input.txt");
 const content = fs.readFileSync(inputFile, "utf-8");
 const input = content.split(/\r?\n/).map((c) => parseInt(c));
 
